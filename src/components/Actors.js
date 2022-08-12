@@ -5,12 +5,12 @@ function Actors() {
   const actorsList = actors.map((obj) => {
     const actorsMovies = obj.movies.map((movie) => {
       return (
-        <li>{movie}</li>
+        <li key={movie} >{movie}</li>
       )
     })
 
     return (
-      <div>
+      <div key={obj.name}>
         <h2>{obj.name}</h2>
         {actorsMovies}
       </div>
@@ -19,7 +19,7 @@ function Actors() {
 
   return (
     <div>
-      <h1>Actor's Page</h1>
+      <h1>Actors Page</h1>
       {actorsList}
     </div>);
 }

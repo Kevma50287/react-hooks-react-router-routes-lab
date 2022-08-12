@@ -6,12 +6,12 @@ function Directors() {
   const directorsList = directors.map((obj)=>{
     const directorsMovies = obj.movies.map((movie)=>{
       return (
-        <li>{movie}</li>
+        <li key={movie} >{movie}</li>
       )
     })
 
     return (
-      <div>
+      <div key={obj.name}>
         <h2>{obj.name}</h2>
         {directorsMovies}
       </div>
@@ -20,7 +20,7 @@ function Directors() {
 
   return (
   <div>
-    <h1>Director's Page</h1>
+    <h1>Directors Page</h1>
     {directorsList}
   </div>);
 }
