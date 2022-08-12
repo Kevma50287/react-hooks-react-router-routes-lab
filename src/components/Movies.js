@@ -6,12 +6,12 @@ function Movies() {
   const movieList = movies.map((obj)=>{
     const genres = obj.genres.map((genre)=>{
       return (
-        <li>{genre}</li>
+        <li key={genre} >{genre}</li>
       )
     })
 
     return (
-      <div>
+      <div key={obj.title}>
         <h1>{obj.title}</h1>
         <h3>RunTime: {obj.time}</h3>
         <ul>
